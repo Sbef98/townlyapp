@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import Swal from 'sweetalert2';
 
 @Component({
     selector: 'app-navbar',
@@ -53,5 +54,16 @@ export class NavbarComponent implements OnInit {
         else {
             return false;
         }
+    }
+
+    download(){
+        Swal.fire({
+            icon: 'info',
+            title: 'App ancora in sviluppo!',
+            text: 'Grazie per aver dato un\'occhiata :)',
+            customClass: {
+                confirmButton: 'btn btn-default'
+            },
+        })
     }
 }
